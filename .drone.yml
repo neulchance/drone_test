@@ -1,3 +1,8 @@
+workspace:
+  base: /home/centos
+  path: .
+
 pipeline:
-  commands:
-    - echo hello world
+  test:
+    commands:
+      - echo hello world
