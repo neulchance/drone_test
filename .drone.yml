@@ -8,3 +8,12 @@ pipeline:
     commands:
       - echo hello world
       - cat README.md
+  # deploy:
+  #   image: plugins/git
+  #   depth: 50
+  #   recursive: true
+  #   path: github.com/drone/drone
+  test_2: 
+    image: ansible/centos7-ansible
+    commands:
+      - ls /home/centos
