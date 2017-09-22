@@ -8,15 +8,15 @@ pipeline:
     commands:
       - echo hello world
       - cat README.md
-  deploy:
-    image: plugins/git
-    depth: 50
-    recursive: true
-    path: github.com/tazgong/drone_test
-    commands: 
-      - ls /home/centos
-
-  # test_2: 
-  #   image: ansible/centos7-ansible
-  #   commands:
+  
+  # deploy:
+  #   image: tjeans/git_push
+  #   commands: 
   #     - ls /home/centos
+
+  git_push:
+    image: appleboy/drone-git-push
+    branch: master
+    remote: git@alpinestartup.com:alpinestartup.git
+    force: false
+    commit: true
