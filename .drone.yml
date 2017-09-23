@@ -12,6 +12,6 @@ pipeline:
   git_push:
     image: appleboy/drone-git-push
     branch: master
-    remote: git@alpinestartup.com:alpinestartup.git
+    remote: git@github.com:test_done.git
     empty_commit: true
     force: false
