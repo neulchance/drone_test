@@ -44,6 +44,10 @@ drone secret add \
 --repository tazgong/drone_test \
 --image appleboy/drone-git-push \
 --name git_push_ssh_key \
---value @/home/centos/.ssh/my-first-keypair
+--value @~/.ssh/my-first-keypair
+
+drone secret remove \
+--repository tazgong/drone_test \
+--name git_push_ssh_key \
 
 drone secret add --image=appleboy/drone-git-push octocat/hello-world GIT_PUSH_SSH_KEY @/home/centos/.ssh/my-first-keypair
