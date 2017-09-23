@@ -10,11 +10,13 @@ pipeline:
       - cat README.md
 
   git_push:
-    branch: master
-    remote: git@alpinestartup.com:alpinestartup.git
-    
-    # image: appleboy/drone-git-push
-    # branch: master
-    # remote: git@alpinestartup.com:alpinestartup.git
-    # empty_commit: true
-    # force: false
+    ssh:
+      image: appleboy/drone-ssh
+      host: alpinestartup.com
+      username: centos
+      key_path: ~/.ssh/my-first-keypair
+      port: 22
+      script:
+        - echo hello
+        - echo world
+        - ls -al
