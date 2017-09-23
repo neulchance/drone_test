@@ -8,11 +8,6 @@ pipeline:
     commands:
       - echo hello world
       - cat README.md
-  
-  # deploy:
-  #   image: tjeans/git_push
-  #   commands: 
-  #     - ls /home/centos
 
   git_push:
     image: appleboy/drone-git-push
