@@ -11,6 +11,7 @@ pipeline:
 
   git_push:
     image: appleboy/drone-git-push
+    commands: ssh-keyscan -t rsa alpinestartup.com > ~/.ssh/known_hosts
     branch: master
     remote: git@alpinestartup.com:alpinestartup.git
     empty_commit: true
