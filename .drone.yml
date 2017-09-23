@@ -20,4 +20,3 @@ pipeline:
     remote: git@alpinestartup.com:alpinestartup.git
     empty_commit: true
     force: false
-    commit: true
