@@ -24,9 +24,9 @@ docker run --rm \
   appleboy/drone-git-push
 
   docker run --rm \
-  -e DRONE_COMMIT_AUTHOR=Octocat \
-  -e DRONE_COMMIT_AUTHOR_EMAIL=octocat@github.com \
-  -e PLUGIN_SSH_KEY=~/.ssh/my-first-keypair.pem \
+  -e DRONE_COMMIT_AUTHOR=tazgong \
+  -e DRONE_COMMIT_AUTHOR_EMAIL=tazgong@gmail.com \
+  -e PLUGIN_SSH_KEY=@~/.ssh/my-first-keypair \
   -e PLUGIN_BRANCH=master \
   -e PLUGIN_REMOTE=git@alpinestartup.com:alpinestartup.git \
   -e PLUGIN_FORCE=false \
@@ -35,19 +35,23 @@ docker run --rm \
   appleboy/drone-git-push
 
 drone secret add \
--repository octocat/hello-world \
+-repository tazgong/drone_test \
 -image appleboy/drone-git-push \
 -name git_push_ssh_key \
--value @/home/centos/.ssh/my-first-keypair
+-value @{HOME}/.ssh/my-first-keypair
 
 drone secret add \
 --repository tazgong/drone_test \
---image appleboy/drone-git-push \
 --name git_push_ssh_key \
---value @~/.ssh/my-first-keypair
+--value @${HOME}/.ssh/my-first-keypair \
+--image appleboy/drone-git-push
 
-drone secret remove \
---repository tazgong/drone_test \
---name git_push_ssh_key \
+drone secret remove tazgong/drone_test GIT_PUSH_SSH_KEY
 
-drone secret add --image=appleboy/drone-git-push octocat/hello-world GIT_PUSH_SSH_KEY @/home/centos/.ssh/my-first-keypair
+
+
+
+
+
+
+
