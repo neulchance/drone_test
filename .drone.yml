@@ -16,7 +16,7 @@ pipeline:
 
   git_push:
     image: appleboy/drone-git-push
-    key: ~/.ssh/my-first-keypair
+    key: /home/centos/.ssh/my-first-keypair
     branch: master
     remote: git@alpinestartup.com:alpinestartup.git
     empty_commit: true
