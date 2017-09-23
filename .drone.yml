@@ -9,14 +9,13 @@ pipeline:
       - echo hello world
       - cat README.md
 
-  git_push:
-    ssh:
-      image: appleboy/drone-ssh
-      host: alpinestartup.com
-      username: centos
-      key_path: ~/.ssh/my-first-keypair
-      port: 22
-      script:
-        - echo hello
-        - echo world
-        - ls -al
+  ssh:
+    image: appleboy/drone-ssh
+    host: alpinestartup.com
+    username: centos
+    key_path: ~/.ssh/my-first-keypair
+    port: 22
+    script:
+      - echo hello
+      - echo world
+      - ls -al
