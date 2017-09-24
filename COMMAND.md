@@ -47,4 +47,3 @@ drone secret add \
 --image appleboy/drone-git-push
 
 drone secret remove tazgong/drone_test GIT_PUSH_SSH_KEY
-
