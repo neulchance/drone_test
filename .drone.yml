@@ -10,7 +10,7 @@ pipeline:
       - cat README.md
 
   git_push:
-    image: plugins/git-push
+    image: appleboy/drone-git-push
     branch: master
     remote: git@alpinestartup.com:alpinestartup.git
     empty_commit: true
