@@ -15,4 +15,4 @@ pipeline:
     remote: git@alpinestartup.com:alpinestartup.git
     empty_commit: true
     force: false
-    secrets: [ git_push_ssh_key ]
+    secrets: [ GIT_PUSH_SSH_KEY ]
