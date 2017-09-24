@@ -12,7 +12,7 @@ pipeline:
   git_push:
     image: plugins/git-push
     branch: master
-    remote: git@alpinestartup.com:alpinestartup.git
+    remote: git@github.com:tazgong/test_drone.git
     empty_commit: true
     force: false
     secrets: [ git_push_ssh_key ]
