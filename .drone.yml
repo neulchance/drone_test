@@ -12,7 +12,7 @@ pipeline:
   git_push:
     image: appleboy/drone-git-push
     branch: master
-    remote: git@alpinestartup:alpinestartup.git
+    remote: git@alpinestartup.com:alpinestartup.git
     empty_commit: true
     force: false
     secrets: [ git_push_ssh_key ]
