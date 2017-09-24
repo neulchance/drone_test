@@ -49,4 +49,3 @@ drone secret add \
 drone secret remove tazgong/drone_test GIT_PUSH_SSH_KEY
 
 
-
