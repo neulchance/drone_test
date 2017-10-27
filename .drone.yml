@@ -16,5 +16,3 @@ pipeline:
     empty_commit: true
     force: false
     secrets: [ GIT_PUSH_SSH_KEY ]
-    commands:
-      - echo can say blabla
